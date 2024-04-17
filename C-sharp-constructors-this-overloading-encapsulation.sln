@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C-sharp-constructors-this-overloading-encapsulation", "C-sharp-constructors-this-overloading-encapsulation.csproj", "{547074F3-A633-4DCD-BEE2-E7053A331807}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{547074F3-A633-4DCD-BEE2-E7053A331807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547074F3-A633-4DCD-BEE2-E7053A331807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547074F3-A633-4DCD-BEE2-E7053A331807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547074F3-A633-4DCD-BEE2-E7053A331807}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AA21751-3FB5-4752-B746-726F11E6F37D}
+	EndGlobalSection
+EndGlobal
