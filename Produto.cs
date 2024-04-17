@@ -21,6 +21,14 @@ namespace C_sharp_constructors_this_overloading_encapsulation
             Quantidade = quantidade;
         }
 
+        //OVERLOADING(SOBRECARGA)
+        public Produto(string nome, double preco)
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = 10;
+        }
+
         public double ValorTotalEmEstoque()
         {
             return Preco * Quantidade;
