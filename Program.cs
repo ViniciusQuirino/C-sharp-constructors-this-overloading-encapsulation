@@ -20,7 +20,8 @@ namespace Course
             //Console.Write("Quantidade: ");
             //int quantidade = int.Parse(Console.ReadLine());
 
-            Produto p = new Produto(nome, preco);
+            Produto p = new Produto(nome, preco); 
+            
 
             p.Mostrar();
 

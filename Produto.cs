@@ -13,20 +13,15 @@ namespace C_sharp_constructors_this_overloading_encapsulation
         public double Preco;
         public int Quantidade;
 
-        //CONSTRUCTOR
-        public Produto(string nome, double preco, int quantidade)
-        {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
-        }
-
-        //OVERLOADING(SOBRECARGA)
         public Produto(string nome, double preco)
         {
             Nome = nome;
             Preco = preco;
-            Quantidade = 10;
+        }
+
+        public Produto(string nome, double preco, int quantidade) : this(nome, preco)
+        {
+            Quantidade = quantidade;
         }
 
         public double ValorTotalEmEstoque()
