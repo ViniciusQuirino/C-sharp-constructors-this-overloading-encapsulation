@@ -17,6 +17,7 @@ namespace C_sharp_constructors_this_overloading_encapsulation
         {
             Nome = nome;
             Preco = preco;
+            Quantidade = 10;
         }
 
         public Produto(string nome, double preco, int quantidade) : this(nome, preco)
