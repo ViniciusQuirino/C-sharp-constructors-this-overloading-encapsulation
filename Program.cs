@@ -40,10 +40,11 @@ namespace Course
 
             //PROPERTIES
             p.Nome = "TV 4K";
-            p.Preco = 100.00;
+            p.Quantidade = 2;
 
             Console.WriteLine(p.Nome);
             Console.WriteLine(p.Preco);
+            Console.WriteLine(p.Quantidade);
         }
     }
 }

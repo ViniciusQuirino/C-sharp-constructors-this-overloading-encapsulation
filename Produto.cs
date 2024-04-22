@@ -10,8 +10,9 @@ namespace C_sharp_constructors_this_overloading_encapsulation
     public class Produto
     {
         private string _nome;
-        private double _preco;
+        public double Preco { get; private set; }
         private int _quantidade;
+
 
         public Produto()
         {
@@ -21,7 +22,7 @@ namespace C_sharp_constructors_this_overloading_encapsulation
         public Produto(string nome, double preco)
         {
             _nome = nome;
-            _preco = preco;
+            Preco = preco;
             _quantidade = 10;
         }
 
@@ -29,7 +30,7 @@ namespace C_sharp_constructors_this_overloading_encapsulation
         {
             _quantidade = quantidade;
         }
-        
+
         //PROPERTIES
         public string Nome
         {
@@ -43,17 +44,11 @@ namespace C_sharp_constructors_this_overloading_encapsulation
                 }
             }
         }
-        //PROPERTIES
-         public double Preco
+
+        public int Quantidade
         {
-            get { return _preco; }
-            set
-            {
-                if (value > 0)
-                {
-                    _preco = value;
-                }
-            }
+            get { return _quantidade; }
+            set { _quantidade = value; }
         }
 
         //ENCAPSULAMENTO
@@ -76,12 +71,12 @@ namespace C_sharp_constructors_this_overloading_encapsulation
 
         public double ValorTotalEmEstoque()
         {
-            return _preco * _quantidade;
+            return Preco * _quantidade;
         }
 
         public void Mostrar()
         {
-            Console.WriteLine($"Nome: {_nome} - Preço: {_preco.ToString("F2", CultureInfo.InvariantCulture)} - Quantidade: {_quantidade} - VALOR TOTAL: {ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Nome: {_nome} - Preço: {Preco.ToString("F2", CultureInfo.InvariantCulture)} - Quantidade: {_quantidade} - VALOR TOTAL: {ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture)}");
         }
 
         public void Adicionar(int quantidade)
