@@ -19,8 +19,8 @@ namespace Course
             //Console.Write("Quantidade: ");
             //int quantidade = int.Parse(Console.ReadLine());
 
-            Produto p = new Produto(nome, preco); 
-            
+            Produto p = new Produto(nome, preco);
+
             p.Mostrar();
 
             Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
@@ -33,10 +33,17 @@ namespace Course
             p.Remover(numero);
             p.Mostrar();
 
+            //ENCAPSULAMENTO
+            // Console.WriteLine(p.GetNome());
+            // Console.WriteLine(p.GetPreco());
+            // p.SetNome("TV 4K");
 
-            Console.WriteLine(p.GetNome());
-            Console.WriteLine(p.GetPreco());
-            p.SetNome("TV 4K");
+            //PROPERTIES
+            p.Nome = "TV 4K";
+            p.Preco = 100.00;
+
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.Preco);
         }
     }
 }

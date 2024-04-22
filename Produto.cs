@@ -29,23 +29,50 @@ namespace C_sharp_constructors_this_overloading_encapsulation
         {
             _quantidade = quantidade;
         }
-
-        public string GetNome()
+        
+        //PROPERTIES
+        public string Nome
         {
-            return _nome;
-        }
-
-        public void SetNome(string nome)
-        {
-            if (nome != null && nome.Length > 1)
+            //value = palavra reservada p/ receber o argumento
+            get { return _nome; }
+            set
             {
-                _nome = nome;
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
+        }
+        //PROPERTIES
+         public double Preco
+        {
+            get { return _preco; }
+            set
+            {
+                if (value > 0)
+                {
+                    _preco = value;
+                }
             }
         }
 
-        public double GetPreco(){
-            return _preco;
-        }
+        //ENCAPSULAMENTO
+        // public string GetNome()
+        // {
+        //     return _nome;
+        // }
+
+        // public void SetNome(string nome)
+        // {
+        //     if (nome != null && nome.Length > 1)
+        //     {
+        //         _nome = nome;
+        //     }
+        // }
+
+        // public double GetPreco(){
+        //     return _preco;
+        // }
 
         public double ValorTotalEmEstoque()
         {
