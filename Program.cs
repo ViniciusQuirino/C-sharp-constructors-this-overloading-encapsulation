@@ -8,43 +8,48 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Entre os dados do produto:");
+            Console.Write("Entre o número da conta: ");
+            int number = int.Parse(Console.ReadLine());
 
-            Console.Write("Nome: ");
+            Console.Write("Nome do titular da conta: ");
             string nome = Console.ReadLine();
 
-            Console.Write("Preço: ");
-            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Haverá depósito inicial (s/n)?");
+            string question = Console.ReadLine().ToLower();
 
-            //Console.Write("Quantidade: ");
-            //int quantidade = int.Parse(Console.ReadLine());
+            Operation o = new Operation();
 
-            Produto p = new Produto(nome, preco);
+            while (question != "s" && question != "n")
+            {
 
-            p.Mostrar();
+                Console.WriteLine("INVALIDO");
+                Console.Write("Haverá depósito inicial (s/n)?");
+                question = Console.ReadLine().ToLower();
+            }
+            if (question == "s")
+            {
+                Console.Write("Entre o valor de depósito inicial: ");
+                double initialDeposit = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
-            int numero = int.Parse(Console.ReadLine());
-            p.Adicionar(numero);
-            p.Mostrar();
+                o = new Operation(number, nome, initialDeposit);
+                o.Show();
+            }
+            else if (question == "n")
+            {
+                o = new Operation(number, nome);
+                o.Show();
+            }
 
-            Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
-            numero = int.Parse(Console.ReadLine());
-            p.Remover(numero);
-            p.Mostrar();
+            Console.Write("Entre um valor para depósito: ");
+            double deposit = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            o.Sum(deposit);
+            o.Show();
 
-            //ENCAPSULAMENTO
-            // Console.WriteLine(p.GetNome());
-            // Console.WriteLine(p.GetPreco());
-            // p.SetNome("TV 4K");
-
-            //PROPERTIES
-            p.Nome = "TV 4K";
-            p.Quantidade = 2;
-
-            Console.WriteLine(p.Nome);
-            Console.WriteLine(p.Preco);
-            Console.WriteLine(p.Quantidade);
+            Console.Write("Entre um valor para saque: ");
+            double withdraw = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            o.Remove(withdraw);
+            o.Show();
         }
+
     }
 }
