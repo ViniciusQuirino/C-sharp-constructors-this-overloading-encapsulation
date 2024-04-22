@@ -32,6 +32,11 @@ namespace Course
             numero = int.Parse(Console.ReadLine());
             p.Remover(numero);
             p.Mostrar();
+
+
+            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.GetPreco());
+            p.SetNome("TV 4K");
         }
     }
 }
