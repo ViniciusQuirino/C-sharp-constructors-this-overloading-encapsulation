@@ -9,7 +9,7 @@ namespace C_sharp_constructors_this_overloading_encapsulation
     public class Operation
     {
         public int _number { get; private set; }
-        public string Name;
+        public string Name { get; set; }
         public double _initialDeposit { get; private set; }
         private double _deposit;
         private double _withdraw;
