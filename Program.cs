@@ -12,11 +12,11 @@ namespace Course
             p.X = 10;
             p.Y = 20;
 
-            System.Console.WriteLine(p);
+            Console.WriteLine(p);
 
             Point m = new Point();
 
-            System.Console.WriteLine(m);
+            Console.WriteLine(m);
         }
     }
 }
